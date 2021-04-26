@@ -1,0 +1,253 @@
+/*Smooth scrolling*/
+:root {
+	scroll-behavior: smooth;
+}
+
+/*CSS Reset*/
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    font-size: 1.125rem; /*18px*/
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #333333;
+    line-height: 1.7;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span{
+    color: #333333;
+    font-weight: 600;
+}
+
+a{
+    text-decoration: none;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+a:focus{
+    outline: none;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.section-padding{
+    padding: 3.75rem 0; /*60px*/
+}
+
+.section-title {
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 3.75rem; /*60px*/
+}
+.section-title h2 {
+    font-size: 3.125rem; /*50px*/
+    font-weight: bold;
+    color: #262626;
+    letter-spacing: 10px;
+    font-family: 'Lobster', cursive;
+}
+
+.section-title h2::after {
+    content: "";
+    border-bottom: 2px solid #262626;
+    display: block;
+    width: 50%;
+    margin: 0.625rem auto; /*10px*/
+}
+
+
+/*********Header area starts*********/
+.header-area{
+    height: 4.0625rem; /*65px*/
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+}
+
+.header-area .navbar{
+    padding: 0 !important;
+}
+
+.header-area .navbar .logo{
+    font-family: Poppins;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: 3px;
+}
+
+.header-area .navbar .nav-link{
+    padding: 0 0.9375rem !important;
+    font-family: 'Poppins';
+    font-size: 0.9375rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.header-area .navbar .nav-link:hover{
+    color: #333333;
+}
+
+.sticky_navigation{
+    -webkit-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out ;
+    transition: all 0.4s ease-out ;
+    -webkit-box-shadow: 0px 3px 4.6px 0.3px rgba(0,0,0,0.25);
+    box-shadow: 0px 3px 4.6px 0.3px rgba(0,0,0,0.25);
+    background-color: #fff;
+}
+
+
+/*********Banner area starts*********/
+.banner-area{
+    height: 100%;
+    position: relative;
+}
+
+.banner-area .welcome-text{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media (max-width: 700px){
+    .banner-area .ah-words-wrapper > b{
+        font-size: 1.625rem;
+    }
+}
+
+@media(max-width: 569px){
+    .banner-area .ah-words-wrapper > b{
+        font-size: 1.375rem;
+    }
+}
+
+
+/*********About area starts*********/
+/*To match the size of image to content(text)*/
+@media (max-width: 991px){
+    .about-area .row > div:nth-child(2) h1{
+        font-size: 1.625rem;
+    }
+}
+
+/*To align the image and center everything*/
+@media (max-width: 767px){
+    .about-area img{
+        display: block;
+        margin: 0 auto 1.25rem;
+        width: 80%;
+        height: auto; 
+    }
+
+    .about-area > div{
+        text-align: center;
+    }
+}
+
+
+/*********Services area starts*********/
+.services-area{
+    background-color: rgb(250, 250, 250);
+}
+
+.services-area h4, .services-area p{
+    text-align: center;
+}
+
+.services .icon-area{
+    text-align: center;
+    font-size: 1.875rem;
+}
+
+.services-area .services > div{
+    margin-bottom: 1.875rem;
+}
+
+/*Change the alignment of the text & icon*/
+@media (max-width: 767px){
+    .services p, .services h4{
+        text-align: start;
+    }
+    
+    .services .icon-area{
+        text-align: left;
+    }
+}
+
+
+/*********Resume area starts*********/
+.resume-area .training-seminar > div,
+.resume-area .experience > div{
+    box-shadow: 0px 0px 20px 1px rgba(201, 201, 201, 0.25);
+    margin-bottom: 0.9375rem; /*15px*/
+    padding: 0.9375rem;
+}
+
+/*To match the box of experience row to training row*/
+@media (max-width: 991px){
+    .resume-area .experience-title{
+        margin-bottom: 2.53125rem; /*40.5px*/
+    }
+}
+
+@media (max-width: 767px){
+    .resume-area .training-seminar{
+        margin-bottom: 1.875rem;
+    }
+
+    .resume-area .experience-title{
+        margin-bottom: 0px;
+    }
+}
+
+.lni{
+    width: 30px;
+    height: 50px;
+}
+
+/*********Contact area starts*********/
+.contact-area{
+    background-color: black;
+    color: #fff;
+    padding: 1.25rem; /*20px*/
+}
+
+/*To adjust the alignment of the row*/
+@media (max-width: 800px){
+    .contact-area .row > div{
+        font-size: 1rem;
+    }
+}
+
+
+/*********Adjust the font-size base to 16px*********/
+@media (max-width: 767px){
+    body{
+        font-size: 1rem;
+    }
+}
